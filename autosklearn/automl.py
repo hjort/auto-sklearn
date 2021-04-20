@@ -853,7 +853,8 @@ class AutoML(BaseEstimator):
                 multiplier = 4
             elif X.dtype in (np.float64, np.float):
                 multiplier = 8
-            elif X.dtype == np.float128:
+            elif X.dtype == np.longdouble:
+            #elif X.dtype == np.float128:
                 multiplier = 16
             else:
                 # Just assuming some value - very unlikely
